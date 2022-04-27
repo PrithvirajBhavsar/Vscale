@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap');
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+            
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgb(34, 34, 34);
+    align-items: center;
+}
+.list{
+    display: flex;
+    list-style-type: none;
+}
+
+.dropdown_list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.dropdown_list>li{
+    text-align: center;
+    padding: 1rem;
+}
+.dropdown_list>li,.list>li{
+    margin: 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+.dropdown_list>li>a,.list>li>a{
+    color: white;
+    text-decoration: none;
+}
+.hamburger{
+    display: none;
+}
+.line{
+    /* border:1px solid #fff; */
+    width:1.5rem;
+    height: 0.1rem;
+    background-color: #fff;
+    margin: 0.2rem 0;
+}
+.hamlist{
+    display: none;
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    /* transition: height 0.5s linear; */
+    /* animation: increase 0.5s linear; */
+}
+.hidelist{
+    animation: hideit 0.5s linear;
+}
+.aaakira{
+    font-family: 'Akira Expanded', sans-serif;
+    font-size: 4.5rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+}
+.btn{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin-top:2rem;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    display: flex;
+}
+.heading{
+    font-family: 'Akira Expanded',sans-serif;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blueviolet;
+    color: transparent;
+} 
+.headingUp{
+    font-family: 'Akira Expanded',sans-serif;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blueviolet;
+    color: transparent;
+    text-align: center;
+    display: none;
+}
+.para{
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.para2{
+    margin-top: 1rem;
+    font-weight: 200;
+    color: blueviolet;
+    font-family: 'Montserrat', sans-serif;
+}
+.container>div{
+    width: 50%;
+}
+.backgrounddheading{
+    text-align: center;
+}
+.backgroundd{
+    background-size: 100% calc(95% + 8px);
+}
+.list>li>a:hover,.dropdown_list>li>a:hover{
+    color: rgb(0, 0, 163);
+}
+/* animations */
+@keyframes increase {
+    0%{
+        height: 0%;
+    }100%{
+        height: 100%;
+    }
+    
+}
+@keyframes hideit {
+    0%{
+        height: 500px;
+    }100%{  
+        height: 0;
+    }
+}
+/* media query */
+@media(max-width:1200px) {
+    .hamburger{
+        display: block;
+    }
+    .lists{
+        display: none;
+    }
+    .backgroundd{
+        flex-direction: column;
+    }
+    .backgroundd>div{
+        width: 100%;
+    }
+}
+@media (max-width:1000px) {
+    .container{
+        flex-direction: column;
+    }
+    .rev{
+        flex-direction: column-reverse;
+    }
+    .container>div,.rev>div{
+        width: 100%;
+    }
+    .heading{
+        display: none;
+    }
+    .headingUp{
+        display: block;
+    }
+    .para2{
+        margin-top: 0.5rem;
+    }
+    .aaakira{
+        font-size: 2.2rem;
+    }
+    .backgroundd{
+        background-size: 100% 100%;
+    }
+}
+@media(max-width:425px){
+    .backgroundd{
+        background-size: 100% calc(100% + 20px);
+    }
+}
